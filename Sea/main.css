@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+:root{
+    --color01:#4A6670;
+    --color02:#FBFFF1;
+    --color03:#DDE0BD;
+    --color04:#28C2FF;
+    --color05:#FF8552;
+    --color06:#3280ce;
+
+    --font-title:"ink", monospace;
+    --font-nav:"pixel", monospace;
+    --font-standard:"century gothic", monospace;
+}
+
+@font-face {
+    font-family:"ink";
+    src: url(font/Ink-Free-Font/Inkfree.ttf) format("truetype");
+}
+
+@font-face {
+    font-family:"pixel";
+    src: url(font/retron2000/Retron2000.ttf) format("truetype");
+}
+
+header{
+    min-height: 200px;
+    background-image: url(images/header1.gif);
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    color: white;
+    font-family: var(--font-title);
+    text-shadow: 2px 2px 5px var(--color01);
+}
+
+header h1{
+    margin:35px auto 5px auto;
+    font-size: 5em;
+    text-transform: uppercase;
+}
+
+header p{
+    font-size: 1.5em;
+}
+
+nav{
+    background-color:var(--color01);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.418);
+    
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--color02);
+    margin: 15px;
+    font-size: 17px;
+    font-family: var(--font-nav);
+    transition: all .1s linear .2s;
+    padding: 15px 0px 15px 0px;
+}
+
+nav a:hover{
+    background-color: var(--color02);
+    padding: 15px;
+    color: #FF8552;
+    border-radius: 5px;
+}
+
+body{
+    background-color: var(--color03);
+}
+
+main{
+    max-width: 800px;
+    min-width: 300px;
+    margin: 30px auto 30px auto;
+    padding: 20px;
+    background-color: var(--color02);
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #48493e94;
+    text-align: justify;
+}
+
+main h2{
+    font-family: var(--font-nav);
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    text-decoration: 4px underline #5fa2e6a8;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+main h2:hover{
+    text-decoration: 4px underline var(--color06);
+}
+
+main p{
+    margin: 15px;
+    text-indent: 15px;
+    font-family: var(--font-standard);
+}
+
+footer{
+    background-color: black;
+    padding:20px;
+    color: white;
+    text-align: center;
+    font-family: var(--font-nav);
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+footer h1 {
+    font-size: 1.3em;
+    margin: 10px;
+}
+
+footer ul{
+    columns: 3;
+    display: inline-block;
+}
+
+footer li{
+    padding: 10px;
+}
+
+footer ul li{
+    list-style-type: none;
+    width: fit-content;
+    text-align: center;
+}
+
+
+

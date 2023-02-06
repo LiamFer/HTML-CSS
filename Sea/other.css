@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+
+#aside1{
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: 25px auto 25px auto;
+}
+
+#aside1 h1{
+    background-color: var(--color06);
+    font-family: var(--font-nav);
+    margin: -10px -10px 25px -10px;
+    padding: 10px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+#aside1 img{
+    width: 85%;
+    border-radius: 10px;
+}
+
+#aside1 ul{
+    font-family: var(--font-standard);
+    list-style-position: inside;
+    text-align: left;
+    margin: 15px 20px 15px 80px;
+    list-style-type: "\1F30A\00A0";
+}
+
+.images{
+    width: 95%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.288);
+}
+
+#flexcircles{
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin:auto;
+    height: fit-content;
+    padding: 20px;
+    text-align: center;
+}
+
+#flexcircles img{
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 1000px;
+    margin:10px 15px 5px 10px;
+    box-shadow: 0px 0px 3px var(--color04);
+}
+
+.iconfooter svg{
+    width: 25px;
+    fill: var(--color04);
+    transition: fill .2s linear .1s;
+    margin: -5px 3px;
+}
+
+.iconfooter:hover svg{
+    fill: var(--color05);
+}

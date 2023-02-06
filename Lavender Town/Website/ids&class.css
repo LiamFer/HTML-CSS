@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+
+#title1{
+    font-size: 3em;
+    display: inline;
+}
+
+#title1:hover{
+    color: #883581;
+}
+
+.title2{
+    text-align: left;
+    color: #8F6593;
+    text-shadow: 2px 2px 3px #AEA4BF;
+}
+
+.title2:hover{
+    text-decoration: underline white;
+}
+
+.pokepics{
+    width: 240px;
+    height: auto;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+}
+
+.link:hover{
+    text-decoration: underline;
+    color: #AEA4BF;
+    text-shadow: 1px 1px 5px #8f659379;
+}
+
+.articles{
+    background-color: #F1FFE7;
+    padding: 25px;
+    margin: auto;
+    max-width: 1000px;
+    box-shadow: 2px 0px 5px #00000079;
+    text-indent: 25px;
+    text-align: center;
+}
+
+.texto{
+    text-align: justify;
+}
+
+#video{
+    background-color: #8f659379;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+
+
+}
+
+#articlesvideo{
+    background-color: #000000;
+    color: white;
+    padding: 25px;
+    margin: auto;
+    max-width: 1000px;
+    text-align: center;
+    box-shadow: 2px 0px 5px #00000085;
+    height: 520px;
+}
+
+.linkarticle{
+    color: #883581;
+    text-decoration: none;
+}
+
+.linkarticle::after{
+    content:"🟣";
+}
+
+.linkarticle:hover{
+    border-radius: 5px;
+    padding: 2.5px;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+}
+
+.pictures{
+    border-radius: 70px;
+    box-shadow: 2px 2px 10px #858f7dc2;
+    margin: 12px;
+}
+
+.articles2{
+    background-color: #F1FFE7;
+    border-radius: 0px 0px 1.2em 1.2em;
+    padding: 25px;
+    margin: auto;
+    max-width: 1000px;
+    box-shadow: 2px 0px 5px #00000079;
+    text-indent: 25px;
+    text-align: center;
+}
+
+.pictures2 {
+    border-radius: 70px 70px 20px 20px;
+    box-shadow: 2px 2px 10px #858f7dc2;
+    margin: 12px;
+}
+
+#me{
+    -webkit-user-drag: none;
+    border-radius: 250px;
+    border: solid #e9a321;
+    box-shadow: 5px 5px 10px #b17c1a7e;
+    margin: auto auto 50px auto;
+}
