@@ -76,6 +76,7 @@ nav a:hover{
 
 body{
     background-color: var(--color03);
+    width: 100%;
 }
 
 main{
