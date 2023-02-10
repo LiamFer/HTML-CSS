@@ -78,7 +78,7 @@ section > p{
     box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.76);
     background-attachment: fixed;
     background-size: cover;
-    background-position: right top;
+    background-position: right center;
 }
 
 #img2{
