@@ -7,9 +7,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
 
+:root{
+    --font01: Verdana, Geneva, Tahoma, sans-serif;
+    --font02:'Passion One', cursive;
+    --font03:'Sriracha', cursive;
+}
+
 html, body{
     min-width: 100vh;
     background-color: aliceblue;
+    font-family: var(--font01);
 }
 
 header{
@@ -21,6 +28,7 @@ header{
 header > h1{
     padding: 50px 0px 0px 0px;
     font-variant: small-caps;
+    font-family: var(--font02);
 }
 
 header > p{
@@ -40,6 +48,7 @@ header a:hover, footer a:hover{
 section{
     padding: 10vh 0vh 10vh 30px;
     line-height: 2em;
+    font-family: var(--font03);
 }
 
 .normal{
