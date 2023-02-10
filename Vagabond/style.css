@@ -61,24 +61,90 @@ header{
     text-decoration: underline;
 }
 
-section{
+main{
+    position: relative;
+}
+
+.box1{
     color: white;
     padding: 10px;
     font-size: clamp(1.2em, 3vw, 5vw);
     font-family: var(--font-sub);
+    height: 50vw;
+    position: relative;
+    line-height: 10vw;
 }
 
-section > p{
-    margin: 100px 0px 100px 20px;
+.box1 > p{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    margin: 20px;
 }
+
+.box2{
+    color: white;
+    padding: 10px;
+    font-size: clamp(1.2em, 3vw, 5vw);
+    font-family: var(--font-sub);
+    height: 95vw;
+    position: relative;
+    line-height: 10vw;
+}
+
+.box2 > p{
+    position: absolute;
+    top:5%;
+    bottom:5%;
+    left: 2%;
+    margin: 20px;
+}
+
+
 
 .container1{
     background-image: url(images/musashi1.png);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    height: 60vw;
+    height: 65vw;
     position: relative;
+    box-shadow: inset 5px 5px 10px rgb(0, 0, 0);
+}
+
+.container1 > p{
+    position: absolute;
+    background-color: rgba(240, 248, 255, 0.795);
+    top: 20%;
+    bottom: 20%;
+    left: 5%;
+    font-size: clamp(1.2em, 3vw, 5vw);
+    padding: 10px;
+    font-family: var(--font-sub);
+    border-radius: 15px;
+}
+
+.container2{
+    background-image: url(images/musashi2.png);
+    background-position: left center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 65vw;
+    position: relative;
+    box-shadow: inset 5px 5px 10px rgb(0, 0, 0);
+}
+
+.container2 > p{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.795);
+    color: white;
+    top: 20%;
+    bottom: 20%;
+    left: 5%;
+    font-size: clamp(1.2em, 3vw, 5vw);
+    padding: 10px;
+    font-family: var(--font-sub);
+    border-radius: 15px;
 }
 
 
