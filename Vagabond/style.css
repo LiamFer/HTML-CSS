@@ -5,55 +5,99 @@
     padding: 0;
 }
 
+:root{
+    --font-title:'Title';
+    --font-sub:'Subtitle';
+}
+
+@font-face {
+    font-family:'Title' ;
+    src: url(font/hiro_misake/HIROMISAKE.ttf) format('truetype');
+}
+
+@font-face {
+    font-family:'Subtitle' ;
+    src: url(font/korean_calligraphy/Korean_Calligraphy.ttf) format('truetype');
+}
+
+body{
+    background-color: black;
+}
+
 header{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: 10vw;
     position: relative;
-    background-color: white;
-    text-align: center;
-    padding: 15px;
-    width: 100vw;
-    min-height: 20vw;
-}
-
-header > p{
-    position: absolute;
-    bottom: 20%;
-}
-
-#subtitle{
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 15px;
+    padding:50px 0px 50px 0px;
 }
 
 #title{
-    font-family: "hashiba";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    font-size: 12vw;
+    text-align: center;
+    
 }
 
-body{background-color: black;
+#title > h1{
+    font-size: clamp(3em, 8vw, 10vw);
+    margin:auto;
+    font-family:var(--font-title);
 }
 
+#title > p{
+    font-family: var(--font-sub);
+    font-size: 18px;
+}
 
-main{
-    background-color: black;
+#title > p > a{
+    text-decoration: none;
+    color: black;
+}
+
+#title > p > a:hover{
+    text-decoration: underline;
+}
+
+section{
     color: white;
-    padding:15px;
-    text-align: left;
-    width: 100%;
-    height: 100%;
-
-    }
-
-main p{
     padding: 10px;
-    margin: 10px;
+    font-size: clamp(1.2em, 3vw, 5vw);
+    font-family: var(--font-sub);
+}
+
+section > p{
+    margin: 100px 0px 100px 20px;
+}
+
+.container1{
+    background-image: url(images/musashi1.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 60vw;
+    position: relative;
 }
 
 
+footer{
+    background-color: white;
+    font-family: var(--font-sub);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
 
