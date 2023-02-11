@@ -116,6 +116,7 @@ footer{
     color: white;
     text-align: center;
     font-family: var(--font-nav);
+    max-width: 800px;
 }
 
 footer a{
@@ -140,7 +141,7 @@ footer li{
 
 footer ul li{
     list-style-type: none;
-    width: fit-content;
+    
     text-align: center;
 }
 
