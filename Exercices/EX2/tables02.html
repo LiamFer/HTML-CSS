@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        body {
+            font-family: 'century gothic';
+            background-color: rgb(230, 182, 112);
+            text-align: center;
+            height: 800vh;
+        }
+
+        h1{
+            color: white;
+            text-shadow: 0px 0px 15px black;
+        }
+
+        table {
+            width: 450px;
+            text-align: center;
+            margin: auto;
+            font-size: 15px;
+            border-collapse: collapse;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
+            background-color: white;
+            position: relative;
+        }
+
+        thead{
+            position: sticky;
+            top: -1px;
+        }
+
+        caption{
+            font-size: 1.5em;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 10px;
+        }
+
+        tbody{
+            text-align: left;
+        }
+
+        tbody > tr:nth-child(2n){
+            background-color: lightsalmon;
+        }
+
+        thead,tfoot {
+            background-color: rgb(109, 66, 0);
+            color: white;
+        }
+
+
+        tfoot > tr > td{
+            background-color: rgb(109, 66, 0);
+            font-weight: bolder;
+        }
+
+        td,th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .num{
+            text-align: right;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <h1>Huge Tables</h1>
+    <!-- 
+        Anatomia | Tabelas Grandes
+        
+        Table
+            Thead
+                TR, TD, TH
+            Tbody
+                TR, TD, TH
+            Tfoot
+                TR, TD, TH
+     -->
+
+    <table>
+        <caption>População por Estado</caption>
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>População</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Acre</td>
+                <td class="num">795 145</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3 327 551</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">756 500</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">3 893 763</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">15 150 143</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">8 867 448</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">2 867 869</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">3 894 899</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">6 551 322</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">6 861 924</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3 236 578</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2 630 098</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">20 777 672</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 101 180</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">3 950 359</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 112 062</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9 297 861</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3 198 185</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">16 497 395</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3 419 550</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 228 091</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1 755 015</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">500 826	</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">6 734 568</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">44 169 350</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2 227 294</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1 502 759</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>Total de Pessoas</th>
+                <td class="num">0000</td>
+            </tr>
+        </tfoot>
+
+    </table>
+</body>
+
+</html>
