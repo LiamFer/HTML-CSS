@@ -85,7 +85,7 @@ aside > p{
     padding: 15vh 0vh 15vh 30px;
     background-image: url(images/musashi3.jpg);
     background-size: cover;
-    background-position: left center;
+    background-position: center;
     background-attachment: fixed;
     font-size: 4.5vw;
 }
