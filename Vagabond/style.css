@@ -79,6 +79,7 @@ aside > p{
     background-position: center;
     background-attachment: fixed;
     font-size: 4.5vw;
+    box-shadow: inset 5px 5px 15px black;
 }
 
 #image02{
@@ -88,6 +89,7 @@ aside > p{
     background-position: center;
     background-attachment: fixed;
     font-size: 4.5vw;
+    box-shadow: inset 5px 5px 15px black;
 }
 
 footer{
