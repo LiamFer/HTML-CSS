@@ -52,8 +52,8 @@
 }
 
 #flexcircles img{
-    width: 340px;
-    height: 340px;
+    width: 90%;
+    height: 50vh;
     object-fit: cover;
     border-radius: 1000px;
     margin:10px 15px 5px 10px;
@@ -61,7 +61,7 @@
 }
 
 .iconfooter svg{
-    width: 25px;
+    max-width: 25px;
     fill: var(--color04);
     transition: fill .2s linear .1s;
     margin: -5px 3px;
