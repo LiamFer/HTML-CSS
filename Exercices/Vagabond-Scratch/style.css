@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --font-title:'Title';
+    --font-sub:'Subtitle';
+}
+
+@font-face {
+    font-family:'Title' ;
+    src: url(font/hiro_misake/HIROMISAKE.ttf) format('truetype');
+}
+
+@font-face {
+    font-family:'Subtitle' ;
+    src: url(font/korean_calligraphy/Korean_Calligraphy.ttf) format('truetype');
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: 10vw;
+    position: relative;
+    padding:50px 0px 50px 0px;
+}
+
+#title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+}
+
+#title > h1{
+    font-size: clamp(3em, 8vw, 10vw);
+    margin:auto;
+    font-family:var(--font-title);
+}
+
+#title > p{
+    font-family: var(--font-sub);
+    font-size: 18px;
+}
+
+#title > p > a{
+    text-decoration: none;
+    color: black;
+}
+
+#title > p > a:hover{
+    text-decoration: underline;
+}
+
+main{
+    position: relative;
+}
+
+.box1{
+    color: white;
+    padding: 10px;
+    font-size: clamp(1.2em, 3vw, 5vw);
+    font-family: var(--font-sub);
+    height: 50vw;
+    position: relative;
+    line-height: 10vw;
+}
+
+.box1 > p{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    margin: 20px;
+}
+
+.box2{
+    color: white;
+    padding: 10px;
+    font-size: clamp(1.2em, 3vw, 5vw);
+    font-family: var(--font-sub);
+    height: 95vw;
+    position: relative;
+    line-height: 10vw;
+}
+
+.box2 > p{
+    position: absolute;
+    top:5%;
+    bottom:5%;
+    left: 2%;
+    margin: 20px;
+}
+
+
+
+.container1{
+    background-image: url(images/musashi1.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 65vw;
+    position: relative;
+    box-shadow: inset 5px 5px 10px rgb(0, 0, 0);
+}
+
+.container1 > p{
+    position: absolute;
+    background-color: rgba(240, 248, 255, 0.795);
+    top: 20%;
+    bottom: 20%;
+    left: 5%;
+    font-size: clamp(1.2em, 3vw, 5vw);
+    padding: 10px;
+    font-family: var(--font-sub);
+    border-radius: 15px;
+}
+
+.container2{
+    background-image: url(images/musashi2.png);
+    background-position: left center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 65vw;
+    position: relative;
+    box-shadow: inset 5px 5px 10px rgb(0, 0, 0);
+}
+
+.container2 > p{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.795);
+    color: white;
+    top: 20%;
+    bottom: 20%;
+    left: 5%;
+    font-size: clamp(1.2em, 3vw, 5vw);
+    padding: 10px;
+    font-family: var(--font-sub);
+    border-radius: 15px;
+}
+
+
+footer{
+    background-color: white;
+    font-family: var(--font-sub);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+

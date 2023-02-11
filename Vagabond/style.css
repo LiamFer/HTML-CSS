@@ -6,8 +6,9 @@
 }
 
 :root{
-    --font-title:'Title';
-    --font-sub:'Subtitle';
+    --font-standard:'century gothic', monospace;
+    --font-title:'Title', serif;
+    --font-sub:'Subtitle', sans-serif;
 }
 
 @font-face {
@@ -21,149 +22,78 @@
 }
 
 body{
+    min-height: 100vh;
     background-color: black;
+    font-family: var(--font-standard);
 }
 
 header{
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    height: 10vw;
-    position: relative;
-    padding:50px 0px 50px 0px;
-}
-
-#title{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    background-color: white;
     text-align: center;
-    
 }
 
-#title > h1{
-    font-size: clamp(3em, 8vw, 10vw);
-    margin:auto;
-    font-family:var(--font-title);
+header > h1{
+    font-family: var(--font-title);
+    font-size: 10vw;
+    padding: 40px 0px 0px 0px;
 }
 
-#title > p{
+header > p{
+    padding: 0px 0px 40px 0px;
     font-family: var(--font-sub);
-    font-size: 18px;
+    font-size: 1.3em;
 }
 
-#title > p > a{
+header a, footer a{
     text-decoration: none;
     color: black;
 }
 
-#title > p > a:hover{
+header a:hover, footer a:hover{
     text-decoration: underline;
 }
 
-main{
-    position: relative;
-}
-
-.box1{
+section, aside{
+    padding: 10vh 0px 10vh 30px;
     color: white;
-    padding: 10px;
-    font-size: clamp(1.2em, 3vw, 5vw);
     font-family: var(--font-sub);
-    height: 50vw;
-    position: relative;
-    line-height: 10vw;
+    font-size: 3.5vw;
 }
 
-.box1 > p{
-    position: absolute;
-    top: 5%;
-    left: 2%;
-    margin: 20px;
+section > p{
+    padding: 0px 0px 1.5em;
+    
 }
 
-.box2{
-    color: white;
-    padding: 10px;
-    font-size: clamp(1.2em, 3vw, 5vw);
-    font-family: var(--font-sub);
-    height: 95vw;
-    position: relative;
-    line-height: 10vw;
+aside > p{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.637);
+    padding: 15px;
+    border-radius: 15px;
 }
 
-.box2 > p{
-    position: absolute;
-    top:5%;
-    bottom:5%;
-    left: 2%;
-    margin: 20px;
-}
-
-
-
-.container1{
+#image01{
+    padding: 15vh 0px 15vh 30px;
     background-image: url(images/musashi1.png);
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-size: cover;
-    height: 65vw;
-    position: relative;
-    box-shadow: inset 5px 5px 10px rgb(0, 0, 0);
+    font-size: 4.5vw;
 }
 
-.container1 > p{
-    position: absolute;
-    background-color: rgba(240, 248, 255, 0.795);
-    top: 20%;
-    bottom: 20%;
-    left: 5%;
-    font-size: clamp(1.2em, 3vw, 5vw);
-    padding: 10px;
-    font-family: var(--font-sub);
-    border-radius: 15px;
-}
-
-.container2{
+#image02{
+    padding: 15vh 0vh 15vh 30px;
     background-image: url(images/musashi2.png);
+    background-size: cover;
     background-position: left center;
     background-attachment: fixed;
-    background-size: cover;
-    height: 65vw;
-    position: relative;
-    box-shadow: inset 5px 5px 10px rgb(0, 0, 0);
+    font-size: 4.5vw;
 }
-
-.container2 > p{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.795);
-    color: white;
-    top: 20%;
-    bottom: 20%;
-    left: 5%;
-    font-size: clamp(1.2em, 3vw, 5vw);
-    padding: 10px;
-    font-family: var(--font-sub);
-    border-radius: 15px;
-}
-
 
 footer{
     background-color: white;
     font-family: var(--font-sub);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-size: 25px;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 10px;
 }
-
-footer a{
-    text-decoration: none;
-    color: black;
-}
-
-footer a:hover{
-    text-decoration: underline;
-}
-
