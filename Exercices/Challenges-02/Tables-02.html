@@ -6,57 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
         body{
             font-family: 'century gothic';
+            background-color: cadetblue;
         }
 
-        #table1{
-            width: 700px;
+        table{
             border-collapse: collapse;
-            border: 3px solid black;
-            color: rgb(0, 0, 0);
+            background-color: white;
             text-align: center;
-            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.767);
+            width: 500px;
+            margin: 50px auto;
+            
         }
 
-        #table1 thead{
-            border: 2px solid black;
-        }
-
-        #table1 th{
-            background-color: rgb(31, 165, 91);
-            color: white;
-            border: 2px solid black;
-        }
-
-        #table1 td{
-            padding: 10px;
+        td, th{
             border: 1px solid black;
+            padding: 10px;
         }
 
-        .materias{
-            text-align: left;
-        }
-
-        .cor{
-            background-color: rgb(31, 165, 91);
+        thead, .topics{
+            background-color: blueviolet;
             color: white;
-            border: 2px solid black;
+        }
+
+        .topics > th{
+            text-align:left;
+        }
+
+        .subjects{
+            text-align: left;
         }
 
     </style>
 </head>
 <body>
 
-    <table id="table1">
-        <thead >
-            <tr>
-                <th scope="col" rowspan="2">Área</th>
-                <th scope="col" rowspan="2">Disciplinas</th>
-                <th scope="col" colspan="2">Notas</th>
-                <th scope="col" rowspan="2">Média</th>
-            </tr>
+    <table>
 
+        <thead>
+            <tr>
+                <th rowspan="2" scope="col">Área</th>
+                <th rowspan="2" scope="col">Disciplinas</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="col">Média</th>
+            </tr>
             <tr>
                 <th scope="col">Nota 1</th>
                 <th scope="col">Nota 2</th>
@@ -65,53 +60,56 @@
 
         <tbody>
             <tr>
-                <td rowspan="4">Exatas</td>
-                <td class="materias">Matemática</td>
+                <th rowspan="4" scope="rowgroup">Exatas</th>
+                <td scope="row" class="subjects">Matemática</td>
                 <td>0.0</td>
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
             <tr>
-                <td class="materias">Física</td>
+                <td scope="row" class="subjects">Física</td>
                 <td>0.0</td>
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
             <tr>
-                <td class="materias">Química</td>
+                <td scope="row" class="subjects">Química</td>
                 <td>0.0</td>
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
             <tr>
-                <td class="materias">Biologia</td>
+                <td scope="row" class="subjects">Biologia</td>
                 <td>0.0</td>
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
 
-            <tr class="cor">
-                <td colspan="4" class="materias">Média de Exatas</td>
+            <tr class="topics">
+                <th colspan="4" scope="row">Média de Exatas</th>
                 <td>0.0</td>
             </tr>
 
             <tr>
-                <td rowspan="2">Humanas</td>
-                <td class="materias">História</td>
+                <th scope="rowgroup" rowspan="2">Humanas</th>
+                <td scope="row" class="subjects">História</td>
                 <td>0.0</td>
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
+
             <tr>
-                <td class="materias">Geografia</td>
+                <td scope="row" class="subjects">Geografia</td>
                 <td>0.0</td>
                 <td>0.0</td>
                 <td>0.0</td>
             </tr>
-            <tr class="cor">
-                <td colspan="4" class="materias">Média de Humanas</td>
+
+            <tr class="topics">
+                <th colspan="4" scope="row">Média de Jumanas</th>
                 <td>0.0</td>
             </tr>
+            
         </tbody>
 
     </table>
