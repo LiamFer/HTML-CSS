@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'century gothic';
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 500px;
+            background-color: white;
+        }
+
+        thead{
+            background-color: brown;
+            color: white;
+        }
+
+        td,th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .col1{
+            background-color: burlywood;
+        }
+        
+        .col2{
+            background-color: rgb(161, 175, 219);
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+
+        <colgroup>
+            <col class="col1">
+            <col class="col2" span="2">
+            <col class="col1">
+        </colgroup>
+
+        <thead>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Ocuppation</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Eduardo</td>
+                <td>M</td>
+                <td>18</td>
+                <td>Plumber</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>F</td>
+                <td>19</td>
+                <td>Plumber</td>
+            </tr>
+            <tr>
+                <td>Giulia</td>
+                <td>F</td>
+                <td>17</td>
+                <td>Plumber</td>
+            </tr>
+            <tr>
+                <td>Jennifer</td>
+                <td>F</td>
+                <td>45</td>
+                <td>Plumber</td>
+            </tr>
+            <tr>
+                <td>Kelly</td>
+                <td>M</td>
+                <td>28</td>
+                <td>Plumber</td>
+            </tr>
+            <tr>
+                <td>Magal</td>
+                <td>M</td>
+                <td>34</td>
+                <td>Plumber</td>
+            </tr>
+        </tbody>
+        
+    </table>
+    
+</body>
+</html>
