@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #google{
+            width: 800px;
+            height: 900px;
+        }
+        
+        body{
+            background-color: gray;
+            color: white;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        main{
+            max-width: 900px;
+            background-color: black;
+            margin: auto;
+            border-radius: 15px;
+            padding: 15px;
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>Content Inside Iframes</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint maxime harum quisquam incidunt? Numquam natus
+            totam unde assumenda modi porro molestiae minima! Minus numquam eos doloremque in. Molestiae, tenetur debitis.
+            Velit harum aliquid, iusto minima esse nam aliquam totam accusamus alias, tempora obcaecati sed dolore.
+            Molestiae corporis eligendi ipsa odit reiciendis, labore corrupti laboriosam vel rem cum et laborum. Sapiente!
+        </p>
+        <h2>Videos</h2>
+        <div style="padding:46.2% 0 0 0;position:relative;"><iframe
+                src="https://player.vimeo.com/video/631774445?h=7317ae3e6d&title=0&byline=0&portrait=0"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <h2>Google Maps</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.474259204066!2d-73.99120703108366!3d40.861465233544386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f724f1340053%3A0xc76e4d081b4ab2ab!2s150%20Prospect%20St%2C%20Leonia%2C%20NJ%2007605%2C%20USA!5e0!3m2!1sen!2sbr!4v1676331940259!5m2!1sen!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h2>Waze Maps</h2>
+        <iframe src="https://embed.waze.com/iframe?zoom=17&lat=-23.030234&lon=-46.987967&ct=livemap" width="600"
+            height="450" allowfullscreen></iframe>
+        <h2>Google Docs</h2>
+        <iframe id="google" src="https://docs.google.com/document/d/e/2PACX-1vSvoLP0Eb8OKJBS9ER34DlGjx6YhvMWgjhGkd5iqLfYSVDg3BshHJuh8WLK_l9_GDxL5LQDhZc0-FVq/pub?embedded=true"></iframe>
+    </main>
+</body>
+
+</html>
