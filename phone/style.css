@@ -1,0 +1,47 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'century gothic', monospace;
+}
+
+html, body{
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+body{
+    background-image: url(images/fundo-madeira.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+main{
+    position: relative;
+    height: 100vh;
+    
+}
+
+#phone{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    height: 627px;
+    width: 311px;
+    background-image: url(images/frame-iphone.png);
+    background-repeat: no-repeat;
+}
+
+#screen{
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 269px;
+    height: 471px;
+}
