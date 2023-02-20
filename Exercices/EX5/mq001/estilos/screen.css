@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* Estilo para telas */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    font-family: 'century gothic', monospace;
+}
+
+header{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+}
+
+header > h1{
+    text-align:center;
+}
+
+menu > ul > li{
+    display: inline-block;
+    list-style-type: none;
+    background-color: aliceblue;
+    color: black;
+    padding: 10px;
+}
+
+main{
+    margin-top: 25px;
+}
+
+article{
+    border-radius: 20px;
+    max-width: 600px;
+    min-width: 300px;
+    text-align: center;
+    margin: auto;
+    padding: 25px;
+    background-color: black;
+    color: white;
+}
