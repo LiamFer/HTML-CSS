@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        textarea{
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="post">
+
+        <fieldset>
+            <legend>Selection, Datalist and Textarea</legend>
+            <p>
+                <label for="icountry">Country: </label>
+                <select name="country" id="icountry">
+                    <option value="" disabled selected>Choose a Country</option>
+                    <optgroup label="Test">
+                        <option value="china">China</option>
+                        <option value="eua">EUA</option>
+                        <option value="brazil">Brazil</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="iprof">Profissão: </label>
+                <input type="text" name="prof" id="iprof" list="iproflist">
+                <datalist id="iproflist">
+                    <option value="PEDR">Pedreiro</option>
+                    <option value="MED">Médico</option>
+                    <option value="POLI">Policial</option>
+                    <option value="BOMB">Bombeiro</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="imensagem">Mensagem: </label> <br>
+                <textarea name="mensagem" id="imensagem" cols="30" rows="10"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clean">
+            </p>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
