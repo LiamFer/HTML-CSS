@@ -21,7 +21,7 @@ header > h1{
 }
 
 nav{
-    display: block;
+    display: none;
 }
 
 nav > ul{
@@ -59,4 +59,18 @@ article > p{
     text-align: justify;
     margin-bottom: 10px;
     text-indent: 20px;
+}
+
+#burguer{
+    background-color: rgb(48,48,48);
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#burguer:hover{
+    background-color: white;
+    color: black;
 }
