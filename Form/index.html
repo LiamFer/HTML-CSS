@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <div>
+        <h1>Form Test</h1>
+        <p>I was bored....</p>
+    </div>
+    <main>
+        <form action="" method="post">
+
+            <label for="iname">Name</label>
+            <input class="inputs" type="text" placeholder="Enter your name" id="iemail" name="email" required
+                autocomplete="no">
+
+            <label for="iemail">E-mail</label>
+            <input type="email" name="email" id="iemail" class="inputs" placeholder="Enter your Email" required>
+
+            <label for="iage">Age <sup class="small">(optional)</sup></label>
+            <input type="number" name="age" id="iage" min="10" max="100" class="inputs" placeholder="Age">
+
+            <label for="irole">Which option best describes your current role?</label>
+            <select name="role" id="irole" class="inputs">
+                <option value="" disabled selected>Select current role</option>
+                <option value="student">Student</option>
+                <option value="full-time-job">Full Time Job</option>
+                <option value="full-time-learner">Full Time Learner</option>
+                <option value="notsay">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="recommend">Would you recommend freeCodeCamp to a friend?</label>
+
+            <input class="input-radio" type="radio" name="recommend" id="imaybe">
+            <label class="radio-label" for="imaybe">Definitely</label> <br>
+
+            <input class="input-radio" type="radio" name="recommend" id="iyes">
+            <label class="radio-label" for="iyes">Maybe</label><br>
+
+            <input class="input-radio" type="radio" name="recommend" id="ino">
+            <label class="radio-label" for="ino">Not sure</label><br>
+
+            <label for="ifavorite-feature">What is your favorite feature of freeCodeCamp?</label>
+            <select class="inputs" name="favorite-feature" id="ifavorite-feature" required>
+                <option value="" selected disabled>Select an option</option>
+                <option value="challenges">Challenges</option>
+                <option value="projects">Projects</option>
+                <option value="community">Community</option>
+                <option value="open-source">Open Source</option>
+            </select>
+
+            <label for="">What would you like to see improved? <sup class="small">(Check all that apply)</sup></label>
+
+            <input class="input-checkbox" type="checkbox" name="options" id="ifrontend">
+            <label class="radio-label" for="ifrontend">Front-end Projects</label> <br>
+
+            <input  class="input-checkbox" type="checkbox" name="options" id="ibackend">
+            <label class="radio-label" for="ibackend">Back-end Projects</label> <br>
+
+            <input  class="input-checkbox" type="checkbox" name="options" id="idatavisualization">
+            <label class="radio-label" for="idatavisualization">Data Visualization</label> <br>
+
+            <input  class="input-checkbox" type="checkbox" name="options" id="ichallenges">
+            <label class="radio-label" for="ichallenges">Challenges</label> <br>
+
+            <input  class="input-checkbox" type="checkbox" name="options" id="iopen-source">
+            <label class="radio-label" for="iopen-source">Open Source Community</label> <br>
+
+            <input  class="input-checkbox" type="checkbox" name="options" id="igitter">
+            <label class="radio-label" for="igitter">Gitter help rooms</label> <br>
+
+            <input  class="input-checkbox" type="checkbox" name="options" id="ivideos">
+            <label class="radio-label" for="ivideos">Videos</label> <br>
+
+            <input  class="input-checkbox" type="checkbox" name="options" id="icity">
+            <label class="radio-label" for="icity">City Meetups</label> <br>
+
+            <input  class="input-checkbox" type="checkbox" name="options" id="iwiki">
+            <label class="radio-label" for="iwiki">Wiki</label> <br>
+
+            <input  class="input-checkbox" type="checkbox" name="options" id="iforum">
+            <label class="radio-label" for="iforum">Forum</label> <br>
+
+            <input  class="input-checkbox" type="checkbox" name="options" id="icourses">
+            <label class="radio-label" for="icourses">Additional Courses</label> <br>
+
+
+            <label for="itextarea">Any comments or suggestions?</label>
+            <textarea name="textarea" id="itextarea" cols="77" rows="10" placeholder="Enter your coment here...">
+            </textarea>
+
+
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+</body>
+
+</html>
