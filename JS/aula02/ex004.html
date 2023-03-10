@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nubank</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+            background-color: rgb(145, 69, 145);
+            text-align: center;
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <h1>Nubank</h1>
+
+    <script>
+        alert('Seja bem vindo ao banco!')
+        var nome = prompt('Qual o seu nome?')
+        var deposito = Number.parseFloat(prompt('Quanto você deseja depositar?'))
+        document.write(`Seja bem-vindo ${nome}.<br>`)
+        document.write(`Você depositou ${deposito.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`)
+    </script>
 </body>
+
 </html>
