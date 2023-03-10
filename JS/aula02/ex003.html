@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First JS</title>
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello, world! <output></output></h1>
+    <p>Lorem ipsum dolor sit.</p>
+    <script>
+        var number_1 = Number.parseInt(prompt('Insert a Number'))
+        var number_2 = Number.parseInt(prompt('Insert another number'))
+        var result = number_1 + number_2
+        alert(`${number_1} plus ${number_2} is equal to ${result}`)
+        var name = prompt('Whats your name?')
+        alert(`Nice to meet you ${name.toUpperCase()}, your name has ${name.length} characters`)
+    </script>
+</body>
+
+</html>
