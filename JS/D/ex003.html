@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #corpo {
+            transition: all 1.5s ease-in-out;
+        }
+    </style>
+
+</head>
+
+<body id="corpo">
+    <h1>Goofy a Sistem</h1>
+
+    <label for="txtvel">Velocidade: </label>
+    <input type="number" name="txtvel" id="txtvel" min="30" max="120" required>
+    <input type="button" value="Verificar" id="button">
+    <div id="box">Resultado: </div>
+
+    <script>
+
+        var button = document.getElementById('button')
+        var box = document.getElementById('box')
+        button.addEventListener('click', multa)
+
+        function multa() {
+            var txtvel = document.getElementById('txtvel')
+            var speed = Number(txtvel.value)
+
+            if (speed > 60) {
+                box.innerHTML = `Você foi multado pois estava a ${speed}`
+                document.getElementById('corpo').style.background = 'red'
+                document.getElementById('corpo').style.color = 'white'
+                document.getElementById('corpo').style.textAlign = 'center'
+            } else {
+                box.innerHTML = `Você não foi multado pois estava a ${speed}`
+                document.getElementById('corpo').style.background = 'green'
+                document.getElementById('corpo').style.color = 'white'
+                document.getElementById('corpo').style.textAlign = 'center'
+            }
+        }
+    </script>
+</body>
+
+</html>
