@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #corpo {
+            background-color: rgb(97, 95, 185);
+            color: white;
+            font: normal 18pt 'Century Gothic';
+        }
+    </style>
+</head>
+
+<body id="corpo">
+    <h1 class="titles">Studying DOM</h1>
+    <h1 class="titles">Studying DOM</h1>
+    <p>Test</p>
+    <p name="result">Result:</p>
+    <div>Click Me</div>
+
+    <script>
+        var paragraph = document.getElementsByName('result')[0]
+        paragraph.style.color = 'gray'
+
+        var p1 = document.getElementsByTagName('p')[0]
+        window.document.write(p1.innerText)
+
+        var bodie = document.getElementById('corpo')
+        bodie.style.background = 'black'
+
+        var titles = document.getElementsByClassName("titles")
+        titles.style.color = 'blue'
+    </script>
+</body>
+
+</html>
