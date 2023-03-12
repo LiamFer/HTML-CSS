@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body {
+  background-color: rgb(159, 100, 237);
+  height: 70vh;
+  font-family: "century gothic", Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+select {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+main {
+  width: 700px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.425);
+  background-color: whitesmoke;
+  color: black;
+  font-size: 25px;
+}
