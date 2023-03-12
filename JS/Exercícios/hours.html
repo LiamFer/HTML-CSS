@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hours.css">
+    <title>Time</title>
+</head>
+
+<body>
+    <h1>Hora do Dia</h1>
+    <main id="container">
+        <p id="text"></p>
+        <img src="images/morning.jpg" alt="Imagem" id="image">
+    </main>
+
+    <script>
+        var now = new Date()
+        var hour = now.getHours()
+        var paragraph = document.getElementById('text')
+        paragraph.innerText = `Agora são ${hour} horas.`
+
+        if (hour < 12) {
+            document.getElementById('image').src = 'images/morning.jpg'
+            document.getElementsByTagName('body')[0].style.background = 'goldenrod'
+        } else if (hour < 18) {
+            document.getElementById('image').src = 'images/afternoon.jpg'
+            document.getElementsByTagName('body')[0].style.background = 'orangered'
+        } else {
+            document.getElementById('image').src = 'images/night.jpg'
+            document.getElementsByTagName('body')[0].style.background = 'black'
+        }
+
+    </script>
+</body>
+
+</html>
