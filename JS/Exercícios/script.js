@@ -18,7 +18,8 @@ function verificador() {
     yearInput > currentYear ||
     year.value.length == 1 ||
     year.value.length == 2 ||
-    year.value.length == 3
+    year.value.length == 3 ||
+    yearInput < 1920
   ) {
     alert("[ERROR]");
   } else {
