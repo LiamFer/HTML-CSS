@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body {
+  background-color: rgb(99, 99, 228);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+#container {
+  background-color: aliceblue;
+  padding: 20px;
+  width: 700px;
+  min-height: 400px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
+}
+
+#box {
+  display: none;
+  font-size: 2em;
+  text-align: center;
+}
+
+#box img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+}
