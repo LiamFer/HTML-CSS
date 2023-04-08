@@ -1,8 +1,9 @@
 function fatorial(n) {
-  for (loop = 0; loop < n; loop++) {
-    n = n * loop;
+  charger = 1
+  for (var doppelganger = n; doppelganger > 1; doppelganger--) {
+    charger *= doppelganger
   }
-  return n;
+  return charger;
 }
 
-console.log(fatorial(5));
+console.log(fatorial(4));
