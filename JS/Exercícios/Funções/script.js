@@ -64,7 +64,7 @@ var totalnumbers = numbers_list.length
     total += numbers_list[j];
   }
 
-  average = average/totalnumbers
+  average = total/totalnumbers
 
   if (numbers_list.length == 0) {
     alert("Nenhum número foi adicionado!");

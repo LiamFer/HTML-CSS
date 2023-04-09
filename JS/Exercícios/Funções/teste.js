@@ -12,3 +12,4 @@ for (var i in list){
 }
 
 console.log(maior)
+console.log(list.length)
