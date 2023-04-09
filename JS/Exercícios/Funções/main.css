@@ -29,3 +29,8 @@ h1 {
 #iselections {
   width: 180px;
 }
+
+#result {
+  font-size:1.5em;
+  display:none;
+}
