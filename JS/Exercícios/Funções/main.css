@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body {
+  background-color: dodgerblue;
+  font-family: "century gothic", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  font-size: 4em;
+}
+
+#box {
+  background-color: white;
+  width: 800px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.192);
+}
+
+#box * {
+  margin: 5px;
+}
+
+#iselections {
+  width: 180px;
+}
