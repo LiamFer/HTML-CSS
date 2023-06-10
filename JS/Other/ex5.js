@@ -11,25 +11,24 @@ alert(`Encerrando...`); */
 
 //  Exercicio 2 de Dinheiro
 let money = parseFloat(prompt("Qual seu saldo de dinheiro?"));
-let amount = 0;
 let question = "";
 
 do {
   question = parseFloat(
     prompt(
-      `Você tem R$${money}, qual operação deseja realizar?\n1.Adicionar\n2.Remover\n3.Encerrar`
+      `Você tem R$ ${money}, qual operação deseja realizar?\n1.Adicionar\n2.Remover\n3.Encerrar`
     )
   );
   if (question == 1) {
     alert("Operação selecionada: Adicionar...");
-    amount = parseFloat(prompt("Qual valor?"));
+    let amount = parseFloat(prompt("Qual valor?"));
     money += amount;
   } else if (question == 2) {
     alert("Operação selecionada: Remover...");
-    amount = parseFloat(prompt("Qual valor?"));
+    let amount = parseFloat(prompt("Qual valor?"));
     money -= amount;
   }
 } while (question < 3);
 
-alert(`Seu saldo é ${money}`);
+alert(`Seu saldo é R$ ${money}`);
 alert(`Encerrando...`);
