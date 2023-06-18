@@ -44,16 +44,15 @@ function Program() {
 }
 
 function listarVagas(arr) {
-  let showVagas = "";
-  for (let i = 0; i < arr.length; i++) {
-    showVagas += `Vaga Índice: ${i + 1}\nNome da Vaga: ${
-      arr[i].nome
-    }\nDescrição: ${arr[i].descricao}\nQuantidade de Candidatos: ${
-      arr[i].candidatos.length
+  arr.forEach(function (i, index) {
+    let showVagas = `Vaga Índice: ${index + 1}\nNome da Vaga: ${
+      i.nome
+    }\nDescrição: ${i.descricao}\nQuantidade de Candidatos: ${
+      i.candidatos.length
     }`;
     alert(showVagas);
-    showVagas = "";
-  }
+  });
+
   alert("Não existem mais vagas!");
   alert("Retornando ao menu...");
 }
