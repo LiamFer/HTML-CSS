@@ -17,7 +17,7 @@ function Program() {
   let menu = "";
   do {
     menu = prompt(
-      "Sistema de Vagas de Emprego\n\n1. Listar vagas disponíveis\n2. Criar uma nova vaga\n3. Visualizar uma nova vaga\n4. Inscrever um candidato em uma vaga\n5. Excluir uma vaga\n6. Sair"
+      "Sistema de Vagas de Emprego\n\n1. Listar vagas disponíveis\n2. Criar uma nova vaga\n3. Visualizar vaga\n4. Inscrever um candidato em uma vaga\n5. Excluir uma vaga\n6. Sair"
     );
 
     switch (menu) {
@@ -30,6 +30,15 @@ function Program() {
       case "3":
         visualizarVaga(vagas);
         break;
+      case "4":
+        inscreverCandidato(vagas);
+        break;
+      case "5":
+        excluirVaga(vagas);
+        break;
+      default:
+        alert(`${menu} não é uma opção válida, selecione outra!`);
+        alert;
     }
   } while (menu != 6);
 }
@@ -69,14 +78,17 @@ function novaVaga(arr) {
 }
 
 function visualizarVaga(arr) {
-
   let indice = Number(prompt("Qual o índice da vaga?"));
+
+  if (indice <= 0 || indice > arr.length) {
+    return alert("Vaga não encontrada!");
+  }
 
   let vaga = arr.filter(function (element, index) {
     if (index === indice - 1) {
       return element;
     }
-  })
+  });
 
   let candidatos = "";
   vaga[0].candidatos.forEach(function (element, index) {
@@ -87,6 +99,50 @@ function visualizarVaga(arr) {
   );
 }
 
-function inscreverCandidato(arr) {}
+function inscreverCandidato(arr) {
+  let nomeCandidato = prompt("Qual o nome do candidato?");
+  let indice = Number(prompt("Qual o índice da vaga?"));
+
+  if (indice <= 0 || indice > arr.length) {
+    return alert("Vaga não encontrada!");
+  }
+
+  let vaga = `Vaga Índice: ${indice}\nNome da Vaga: ${
+    arr[indice - 1].nome
+  }\nDescrição: ${arr[indice - 1].descricao}\nQuantidade de Candidatos: ${
+    arr[indice - 1].candidatos.length
+  }`;
+
+  let check = confirm(`Deseja adicionar ${nomeCandidato} na vaga:\n\n${vaga}`);
+
+  if (check) {
+    arr[indice - 1].candidatos.push(nomeCandidato);
+    return alert("Candidato adicionado com sucesso!");
+  } else {
+    inscreverCandidato(arr);
+  }
+}
+
+function excluirVaga(arr) {
+  let indice = Number(prompt("Qual o índice da vaga?"));
+
+  if (indice <= 0 || indice > arr.length) {
+    return alert("Vaga não encontrada!");
+  }
+
+  let vaga = `Vaga Índice: ${indice}\nNome da Vaga: ${
+    arr[indice - 1].nome
+  }\nDescrição: ${arr[indice - 1].descricao}\nQuantidade de Candidatos: ${
+    arr[indice - 1].candidatos.length
+  }`;
+
+  let check = confirm(`Deseja excluir a vaga:\n\n${vaga}`);
+  if (check) {
+    arr.splice(indice - 1, 1);
+    return alert(`A vaga com Índice ${indice} foi removida do sistema!`);
+  } else {
+    excluirVaga(arr);
+  }
+}
 
 Program();
