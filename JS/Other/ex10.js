@@ -44,15 +44,14 @@ function Program() {
 }
 
 function listarVagas(arr) {
-  arr.forEach(function (i, index) {
+  arr.forEach(function (item, index) {
     let showVagas = `Vaga Índice: ${index + 1}\nNome da Vaga: ${
-      i.nome
-    }\nDescrição: ${i.descricao}\nQuantidade de Candidatos: ${
-      i.candidatos.length
+      item.nome
+    }\nDescrição: ${item.descricao}\nQuantidade de Candidatos: ${
+      item.candidatos.length
     }`;
     alert(showVagas);
   });
-
   alert("Não existem mais vagas!");
   alert("Retornando ao menu...");
 }
@@ -70,7 +69,6 @@ function novaVaga(arr) {
 
   if (check) {
     arr.push(vaga);
-    console.log(arr);
   } else {
     novaVaga(arr);
   }
@@ -84,9 +82,7 @@ function visualizarVaga(arr) {
   }
 
   let vaga = arr.filter(function (element, index) {
-    if (index === indice - 1) {
-      return element;
-    }
+    return index === indice - 1
   });
 
   let candidatos = "";
