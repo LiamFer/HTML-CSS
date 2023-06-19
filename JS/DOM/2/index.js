@@ -12,16 +12,16 @@ function contactNew() {
   let liTypes = ["Nome", "Telefone", "Endereço"];
   let inputTypes = ["text", "number", "text"];
 
-  for (let i = 0; i < liTypes.length; i++) {
+  liTypes.forEach(function (i,index) {
     let li = document.createElement("li");
     let input = document.createElement("input");
     let h3 = document.createElement("h3");
     h3.innerText = "Contact";
-    li.innerText = liTypes[i];
-    input.type = `${inputTypes[i]}`;
+    li.innerText = i;
+    input.type = `${inputTypes[index]}`;
     li.appendChild(input);
     ul.appendChild(li);
-  }
+  });
 
   box.appendChild(ul);
   contactsFather.appendChild(box);
