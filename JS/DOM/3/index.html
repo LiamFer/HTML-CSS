@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #controls-box {
+            border-radius: 10px;
+            display: flex;
+            gap: 10px;
+            width: fit-content;
+        }
+
+        #controls-box div {
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            justify-content: center;
+            background-color: coral;
+            border: 1px solid black;
+            box-shadow: 2px 2px 5px solid rgba(0, 0, 0, 0.596);
+        }
+
+        #controls-box div:first-child {
+            background-color: cadetblue;
+        }
+
+        #controls-box input {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        body {
+            position: relative;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Escalação do Time</h1>
+
+    <div id="controls-box">
+        <div>
+            <input type="text" name="" id="Playerposition" placeholder="Player Position">
+            <input type="text" name="" id="Playername" placeholder="Player Name">
+            <input type="number" name="" id="Playernumber" placeholder="Player Number">
+            <input type="button" value="Escalate Player" id="escalateBtn">
+        </div>
+        <div>
+            <input type="number" name="" id="Removeplayernumber" placeholder="Player Number">
+            <input type="button" value="Remove Player" id="removeBtn">
+        </div>
+    </div>
+
+    <main id="firstbox">
+        <h2>Players of the team</h2>
+        <ul id="lista-players">
+           
+        </ul>
+    </main>
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
