@@ -23,25 +23,46 @@ function escalatePlayer() {
     return alert("Insira os dados do jogador!");
   }
 
-  // Criação do elemento do jogador
-  let box = document.createElement("li");
-  let h3 = document.createElement("h3");
-  let position = document.createElement("p");
-  let number = document.createElement("p");
-  h3.innerText = `Jogador -> ${playerName}`;
-  position.innerText = `Posição -> ${playerPosition}`;
-  number.innerText = `Número -> ${playerNumber}`;
-  box.append(h3, position, number);
-  lista.appendChild(box);
+  let repeat = 0;
 
-  let player = {
-    position: playerPosition,
-    name: playerName,
-    number: playerNumber,
-  };
+  teamPlayers.forEach(function (element) {
+    if (
+      element.number === playerNumber ||
+      element.position === playerPosition
+    ) {
+      repeat++;
+    }
+  });
 
-  elementPlayers.push(box);
-  teamPlayers.push(player);
+  if (repeat === 0) {
+    let check = confirm(
+      `Quer adicionar o jogador ${playerPosition} - ${playerName} - ${playerNumber}?`
+    );
+
+    // Criação do elemento do jogador
+    if (check) {
+      let box = document.createElement("li");
+      let h3 = document.createElement("h3");
+      let position = document.createElement("p");
+      let number = document.createElement("p");
+      h3.innerText = `Jogador -> ${playerName}`;
+      position.innerText = `Posição -> ${playerPosition}`;
+      number.innerText = `Número -> ${playerNumber}`;
+      box.append(h3, position, number);
+      lista.appendChild(box);
+
+      let player = {
+        position: playerPosition,
+        name: playerName,
+        number: playerNumber,
+      };
+
+      elementPlayers.push(box);
+      teamPlayers.push(player);
+    }
+  } else {
+    return alert("Já existe um jogador com esse número ou posição!");
+  }
 }
 
 function removePlayer() {
@@ -61,9 +82,17 @@ function removePlayer() {
     }
   });
 
-  teamPlayers.splice(indexRemove, 1);
-  lista.removeChild(elementPlayers[indexRemove]);
-  elementPlayers.splice(indexRemove, 1);
-  console.log(teamPlayers);
-  console.log(elementPlayers);
+  let nome = teamPlayers[indexRemove].name;
+  let posicao = teamPlayers[indexRemove].position;
+  let numero = teamPlayers[indexRemove].number;
+
+  let check = confirm(`Remover o jogador ${posicao} - ${nome} - ${numero}?`);
+
+  if (check) {
+    teamPlayers.splice(indexRemove, 1);
+    lista.removeChild(elementPlayers[indexRemove]);
+    elementPlayers.splice(indexRemove, 1);
+    console.log(teamPlayers);
+    console.log(elementPlayers);
+  }
 }
