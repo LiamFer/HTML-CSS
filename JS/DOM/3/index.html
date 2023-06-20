@@ -9,11 +9,17 @@
         #controls-box {
             border-radius: 10px;
             display: flex;
+            flex-direction: column;
             gap: 10px;
             width: fit-content;
+            padding: 10px;
+            overflow: hidden;
+            height: 170px;
         }
 
         #controls-box div {
+            width: 200px;
+            height: 150px;
             border-radius: 10px;
             display: flex;
             flex-direction: column;
@@ -37,29 +43,78 @@
             position: relative;
             height: 100vh;
         }
+
+        .change {
+            transition: all 1s;
+            animation: changer 2s ease-in forwards;
+        }
+
+        @keyframes changer {
+            0% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-185px);
+            }
+        }
+
+        .backchange {
+            transition: all 1s;
+            animation: backchanger 2s ease-in forwards;
+        }
+
+        @keyframes backchanger {
+            0% {
+                transform: translateY(-185px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        #main-box {
+            display: flex;
+        }
+
+        #main-box>button {
+            background-color: rgba(137, 43, 226, 0.39);
+            border-radius: 10px;
+            border: 1px solid;
+            transition: all .1s;
+        }
+
+        #main-box>button:active {
+            background-color: aliceblue;
+            transform: scale(.9);
+
+        }
     </style>
 </head>
 
 <body>
     <h1>Escalação do Time</h1>
-
-    <div id="controls-box">
-        <div>
-            <input type="text" name="" id="Playerposition" placeholder="Player Position">
-            <input type="text" name="" id="Playername" placeholder="Player Name">
-            <input type="number" name="" id="Playernumber" placeholder="Player Number">
-            <input type="button" value="Escalate Player" id="escalateBtn">
-        </div>
-        <div>
-            <input type="number" name="" id="Removeplayernumber" placeholder="Player Number">
-            <input type="button" value="Remove Player" id="removeBtn">
+    <div id="main-box">
+        <button id="changer">changer</button>
+        <div id="controls-box">
+            <div id="box1">
+                <input type="text" name="" id="Playerposition" placeholder="Player Position">
+                <input type="text" name="" id="Playername" placeholder="Player Name">
+                <input type="number" name="" id="Playernumber" placeholder="Player Number">
+                <input type="button" value="Escalate Player" id="escalateBtn">
+            </div>
+            <div id="box2">
+                <input type="number" name="" id="Removeplayernumber" placeholder="Player Number">
+                <input type="button" value="Remove Player" id="removeBtn">
+            </div>
         </div>
     </div>
 
     <main id="firstbox">
         <h2>Players of the team</h2>
         <ul id="lista-players">
-           
+
         </ul>
     </main>
 

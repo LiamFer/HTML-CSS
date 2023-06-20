@@ -59,6 +59,10 @@ function escalatePlayer() {
 
       elementPlayers.push(box);
       teamPlayers.push(player);
+
+      document.getElementById("Playerposition").value = '';
+      document.getElementById("Playername").value = '';
+      document.getElementById("Playernumber").value = '';
     }
   } else {
     return alert("Já existe um jogador com esse número ou posição!");
@@ -95,4 +99,30 @@ function removePlayer() {
     console.log(teamPlayers);
     console.log(elementPlayers);
   }
+
+  document.getElementById("Removeplayernumber").value = "";
+}
+
+const changer = document.getElementById("changer");
+changer.addEventListener("click", change);
+let counter = 0;
+
+function change() {
+  let box1 = document.getElementById("box1");
+  let box2 = document.getElementById("box2");
+
+  if (counter === 0) {
+    box1.classList.toggle("change");
+    box2.classList.toggle("change");
+    box1.classList.remove("backchange");
+    box2.classList.remove("backchange");
+  } else {
+    box1.classList.toggle("change");
+    box2.classList.toggle("change");
+    box1.classList.toggle("backchange");
+    box2.classList.toggle("backchange");
+    counter = 0;
+  }
+
+  counter++;
 }
