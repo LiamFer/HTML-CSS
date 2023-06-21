@@ -1,7 +1,7 @@
 const form = document.getElementById("formulario");
 const techContent = document.getElementById("technologies");
 const newBtn = document.getElementById("addTec");
-let devData = [];
+let devData = [{nome_completo:'',tecnologias:[],}];
 let techIds = [];
 let expIds = [];
 let count = 0;
@@ -11,7 +11,7 @@ newBtn.addEventListener("click", addTech);
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   let fullname = document.getElementById("fullname").value;
-  devData.push(fullname);
+  devData[0].nome_completo = fullname;
 
   techIds.forEach(function (id,index) {
     let technology = document.getElementById(id);
@@ -21,7 +21,7 @@ form.addEventListener("submit", function (event) {
       techName,
       experience,
     };
-    devData.push(infos);
+    devData[0].tecnologias.push(infos);
     console.log(devData);
   });
 
