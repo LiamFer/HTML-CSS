@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Teste de formulário com JS</h1>
+
+    <form id="formulario">
+
+        <label for="name">Name: </label>
+        <input type="text" name="nome" id="name">
+        <br>
+        <br>
+        <label for="lastname">Last name: </label>
+        <input type="text" name="sobrenome" id="lastname">
+        <br>
+        <br>
+        <label for="age">Age: </label>
+        <input type="number" name="idade" id="age" min="15">
+        <br>
+        <br>
+        <label for="skintone">Skin Tone: </label>
+        <br>
+
+        <input type="radio" name="skintone" id="skintone1" value="Black">
+        <label for="skintone1">Black</label>
+        <br>
+        <input type="radio" name="skintone" id="skintone2" value="White">
+        <label for="skintone2">White</label>
+        <br>
+        <input type="radio" name="skintone" id="skintone3" value="Green">
+        <label for="skintone3">Green</label>
+        <br>
+
+
+
+        <br>
+        <p>What do you like: </p>
+
+        <input type="checkbox" name="checkboxes" id="check1" value="PS4">
+        <label for="check1">PS4</label> <br>
+        <input type="checkbox" name="checkboxes" id="check2" value="XBOX">
+        <label for="check2">XBOX</label> <br>
+        <input type="checkbox" name="checkboxes" id="check3" value="NINTENDO">
+        <label for="check3">NINTENDO</label> <br>
+        <br>
+        <select name="selection" id="selectionid">
+            <option value="" disabled selected>Select your favorite game</option>
+            <option value="Dark Souls">Dark Souls</option>
+            <option value="Elden Ring">Elden Ring</option>
+            <option value="League of Legends">League of Legends</option>
+            <option value="GTA 5">GTA 5</option>
+        </select>
+        <br>
+        <br>
+        <p>Aditional comments:</p>
+        <textarea name="areatext" id="textarea" cols="30" rows="10">
+
+</textarea>
+
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+</body>
+
+</html>
