@@ -12,6 +12,8 @@
   --back-color: #131214;
   --accent-color: #8934dd;
   --font-color: white;
+
+  --error-color: rgb(235, 71, 71);
 }
 
 * {
@@ -107,6 +109,8 @@ main > div:last-child {
   border: 1px solid var(--font-color);
   background-color: var(--back-color);
   color: var(--font-color);
+  text-align: right;
+  padding: 10px;
 }
 #copyButton {
   background-color: var(--font-color);
@@ -120,3 +124,4 @@ main > div:last-child {
 #copyButton:hover {
   opacity: 0.8;
 }
+
