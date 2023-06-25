@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+:root {
+  --color1: #23314ca2;
+  --color2: #1d2641;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, #4b6cb7, #182848);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: "verdana";
+}
+
+#content {
+  background-color: var(--color1);
+  height: 500px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+#insertList {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--color2);
+}
+
+#insertList input {
+  width: 85%;
+  padding: 10px;
+  height: 30px;
+  border: none;
+  outline: none;
+}
+
+
+#insertList button {
+  width: 15%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(169, 252, 86);
+  border: none;
+}
+
+#insertList button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+#tasks {
+  height: 410px;
+  overflow-y: scroll;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#tasks::-webkit-scrollbar {
+  opacity: 0;
+}
+
+.task {
+  display: flex;
+  padding-left: 40px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aliceblue;
+  border-radius: 10px;
+  font-size: 0.9em;
+}
+
+.task button {
+  background-color: aliceblue;
+  border: 1px solid aliceblue;
+  padding: 5px;
+  border-radius: 0px 10px 10px 0px;
+  transition: 0.5s all;
+}
+
+.task svg {
+  fill: aliceblue;
+}
+
+.task:hover button {
+  cursor: pointer;
+  background-color: rgb(250, 95, 95);
+  border: 1px solid rgb(250, 95, 95);
+  padding: 5px;
+}
+
+.task:hover svg {
+  fill: white;
+}
+
+#taskCount {
+  color: white;
+  background-color: var(--color2);
+  border-radius: 0px 0px 10px 10px;
+  font-family: "century gothic";
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-left: 10px;
+}
