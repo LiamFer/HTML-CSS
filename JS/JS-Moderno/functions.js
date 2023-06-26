@@ -11,17 +11,18 @@ const media = (...numbers) => {
 
 // Média Aritmética Ponderada
 
-const mediaPonderada = (...number) => {
-  let weight = number.reduce((charge, element) => {
-    return charge + element[1];
+const mediaPonderada = (...numbers) => {
+  let weight = numbers.reduce((charge, element) => {
+    return charge + element.p;
   }, 0);
 
-  let sum = number.reduce((charge, element) => {
-    return charge + element[0] * element[1];
+  let sum = numbers.reduce((charge, element) => {
+    return charge + element.n * element.p;
   }, 0);
 
   return sum / weight;
 };
+
 
 // Os valores tem que ser passados assim console.log(mediaPonderada([10,2],[5,1]))
 
