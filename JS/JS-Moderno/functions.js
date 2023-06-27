@@ -69,7 +69,9 @@ const moda2 = (...numbers) => {
   let objArr = Object.keys(obj);
   numbers.forEach((number) => {
     for (let i = 0; i < numbers.length; i++) {
-      if (number == objArr[i]) obj[String(number)] += 1;
+      if (number == objArr[i]) {
+        obj[String(number)] += 1;
+      }
     }
   });
   let moda = 0;
@@ -80,7 +82,32 @@ const moda2 = (...numbers) => {
       key = i;
     }
   }
-  let index = objArr.indexOf(key)
+  let index = objArr.indexOf(key);
   return console.log(objArr[index]);
 };
-console.log(moda2(3,3,5,9,3,2,1,3,3,5,15,18));
+
+
+// Jeito de resolver fazendo com object.entries
+const moda3 = (...numbers) => {
+  let obj = {};
+  numbers.forEach((numbers) => (obj[numbers] = 0));
+  let objArr = Object.entries(obj);
+  objArr.forEach((number, index) => {
+    for (let i = 0; i < numbers.length; i++) {
+      if (objArr[index][0] == numbers[i]) {
+        objArr[index][1] += 1;
+      }
+    }
+  });
+  let moda = 0;
+  let i = 0;
+  objArr.forEach((element, index) => {
+    if (element[1] > moda) {
+      moda = element[1];
+      i = index;
+    }
+  });
+  return console.log(objArr[i][0]);
+};
+
+console.log(moda3(3, 3, 5, 9, 3, 2, 1, 3, 3, 5, 15, 18));
