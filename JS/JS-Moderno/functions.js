@@ -86,7 +86,6 @@ const moda2 = (...numbers) => {
   return console.log(objArr[index]);
 };
 
-
 // Jeito de resolver fazendo com object.entries
 const moda3 = (...numbers) => {
   let obj = {};
@@ -110,4 +109,12 @@ const moda3 = (...numbers) => {
   return console.log(objArr[i][0]);
 };
 
-console.log(moda3(3, 3, 5, 9, 3, 2, 1, 3, 3, 5, 15, 18));
+let objeto = {
+  nome: "William",
+  sobrenome: "Fernandes",
+  idade: 18,
+};
+
+for (let i in objeto) {
+  console.log(objeto[i])
+}
