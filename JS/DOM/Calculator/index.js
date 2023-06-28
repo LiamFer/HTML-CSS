@@ -1,27 +1,8 @@
-const main = document.querySelector("main");
+import switchTheme, {enableTyping,copyContent} from "./modules.js";
+
 const inputCalc = document.getElementById("inputCalc");
 const inputResult = document.getElementById("inputResult");
-const allowedKeys = [
-  "(",
-  ")",
-  "/",
-  "*",
-  "-",
-  "+",
-  "9",
-  "8",
-  "7",
-  "6",
-  "5",
-  "4",
-  "3",
-  "2",
-  "1",
-  "0",
-  ".",
-  "%",
-  " ",
-];
+
 
 // Funcionamento das teclas
 
@@ -36,21 +17,7 @@ keys.forEach(function (button) {
 
 // Funcionamento da digitação
 
-inputCalc.addEventListener("keydown", function (ev) {
-  ev.preventDefault();
-  // Verificar se as teclas digitadas são válidas
-  if (allowedKeys.includes(ev.key)) {
-    inputCalc.value += ev.key;
-  }
-  // Permitir o delete no campo
-  if (ev.key === "Backspace") {
-    inputCalc.value = inputCalc.value.slice(0, -1);
-  }
-  // Efetuar o calculo com os valores do input
-  if (ev.key === "Enter") {
-    calculate();
-  }
-});
+enableTyping()
 
 // Botão de limpar
 
@@ -79,34 +46,10 @@ function calculate() {
 
 // Copiar para o clipboard
 
-const copyBtn = document.getElementById("copyButton");
-
-copyBtn.addEventListener("click", function () {
-  if (copyBtn.innerText === "Copy") {
-    copyBtn.innerText = "Copied :)";
-    navigator.clipboard.writeText(inputResult.value);
-    setTimeout(function () {
-      copyBtn.innerText = "Copy";
-    }, 2000);
-  }
-});
+document.getElementById("copyButton").addEventListener("click", copyContent);
 
 // Botão de Trocar o tema da página
+document.getElementById("themeButton").addEventListener("click", switchTheme);
 
-const themeButton = document.getElementById("themeButton");
-const root = document.querySelector(":root");
 
-themeButton.addEventListener("click", function () {
-  console.log(root);
-  if (main.dataset.theme === "dark") {
-    root.style.setProperty("--back-color", "#ffffff");
-    root.style.setProperty("--accent-color", "#dd7834");
-    root.style.setProperty("--font-color", "rgb(17, 17, 17)");
-    main.dataset.theme = "light";
-  } else {
-    root.style.setProperty("--back-color", "#131214");
-    root.style.setProperty("--accent-color", "#8934dd");
-    root.style.setProperty("--font-color", "white");
-    main.dataset.theme = "dark";
-  }
-});
+
