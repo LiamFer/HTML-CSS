@@ -29,6 +29,14 @@ document.getElementById("clear").addEventListener("click", function () {
 
 document.getElementById("equal").addEventListener("click", calculate);
 
+// Copiar para o clipboard
+
+document.getElementById("copyButton").addEventListener("click", copyContent);
+
+// Botão de Trocar o tema da página
+
+document.getElementById("themeButton").addEventListener("click", switchTheme);
+
 // Função de resultado
 
 function calculate() {
@@ -44,12 +52,7 @@ function calculate() {
   }
 }
 
-// Copiar para o clipboard
 
-document.getElementById("copyButton").addEventListener("click", copyContent);
-
-// Botão de Trocar o tema da página
-document.getElementById("themeButton").addEventListener("click", switchTheme);
 
 
 
