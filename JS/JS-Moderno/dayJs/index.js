@@ -2,10 +2,6 @@ const dayjs = require ("dayjs")
 
 require ("dayjs/locale/pt-br")
 
-dayjs.locale('pt-br')
-
-let birthYear = '2004-10-19'
-
 function age (birthdate){
 
 const format = 'DD/MM/YYYY'
@@ -23,4 +19,4 @@ console.log(`You just need to wait ${daysLeft} days.`)
 
 }
 
-age(birthYear)
+age('2004-10-19')
