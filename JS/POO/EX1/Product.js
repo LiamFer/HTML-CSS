@@ -11,7 +11,7 @@ class Product {
   }
   calculateDiscount(discountPercentage) {
     let discount = (this.price * discountPercentage)/100;
-    console.log(`The discount is ${discount}`);
+    console.log(`The discount is ${this.price - discount}`);
   }
 }
 
