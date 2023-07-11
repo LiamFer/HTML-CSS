@@ -1,16 +1,21 @@
 class Component {
+  #reference;
   constructor(element) {
     this.element = element;
-    this.object = 0;
+    this.#reference;
   }
 
   build() {
     const item = document.createElement(this.element);
-    this.object = item;
+    this.#reference = item;
+  }
+
+  readReference() {
+    return this.#reference;
   }
 
   render() {
-    document.getElementById("main").appendChild(this.object);
+    document.getElementById("main").appendChild(this.#reference);
   }
 }
 
@@ -36,18 +41,20 @@ class Form extends Component {
   addInput(tipo) {
     const newInput = new Input(tipo);
     newInput.build();
-    newInput.object.type = newInput.type;
+    const item = newInput.readReference();
+    item.type = newInput.type;
     const render = () =>
-      document.getElementsByTagName("form")[0].appendChild(newInput.object);
+      document.getElementsByTagName("form")[0].appendChild(item);
     render();
   }
 
   addLabel(text) {
     const newLabel = new Label(text);
     newLabel.build();
-    newLabel.object.innerText = text;
+    const item = newLabel.readReference();
+    item.innerText = text;
     const render = () =>
-      document.getElementsByTagName("form")[0].appendChild(newLabel.object);
+      document.getElementsByTagName("form")[0].appendChild(item);
     render();
   }
 }
