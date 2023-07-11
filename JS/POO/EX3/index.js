@@ -5,8 +5,9 @@ class Component {
     this.#reference;
   }
 
-  build() {
+  build(id) {
     const item = document.createElement(this.element);
+    if (id) item.id = id;
     this.#reference = item;
   }
 
@@ -14,8 +15,10 @@ class Component {
     return this.#reference;
   }
 
-  render() {
-    document.getElementById("main").appendChild(this.#reference);
+  render(father, item) {
+    const Father = father ?? "main";
+    const Item = item ?? this.#reference;
+    document.getElementById(Father).appendChild(Item);
   }
 }
 
@@ -43,9 +46,7 @@ class Form extends Component {
     newInput.build();
     const item = newInput.readReference();
     item.type = newInput.type;
-    const render = () =>
-      document.getElementsByTagName("form")[0].appendChild(item);
-    render();
+    newInput.render(this.element);
   }
 
   addLabel(text) {
@@ -53,15 +54,13 @@ class Form extends Component {
     newLabel.build();
     const item = newLabel.readReference();
     item.innerText = text;
-    const render = () =>
-      document.getElementsByTagName("form")[0].appendChild(item);
-    render();
+    newLabel.render(this.element);
   }
 }
 
 const formulario = new Form();
 
-formulario.build();
+formulario.build('form');
 formulario.render();
 formulario.addLabel("Label teste:");
 formulario.addInput("number");
